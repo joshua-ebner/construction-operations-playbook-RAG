@@ -59,8 +59,15 @@ CUSTOM_CSS = """
         background: var(--suffolk-navy);
         color: white;
         padding: 0.85rem 1.75rem;
-        margin: -1rem -1rem 0 -1rem;
-        width: calc(100% + 2rem);
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        margin-top: -1rem;
+        margin-bottom: 0;
+        box-sizing: border-box;
     }
 
     .app-title {
@@ -321,14 +328,14 @@ def render_answer(answer):
 
 def main():
     st.set_page_config(
-        page_title="Operations Playbook Assistant",
+        page_title="Construction Operations Playbook Assistant",
         layout="wide",
     )
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
     st.markdown(
         """
         <div class="top-bar">
-            <span class="app-title">Operations Playbook Assistant</span>
+            <span class="app-title">Construction Operations Playbook Assistant</span>
         </div>
         <div class="hero-panel">
         """
